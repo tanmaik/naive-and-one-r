@@ -1,0 +1,33 @@
+1. separate the vectors and the outputs
+2. discretize everything into 4 equal width buckets
+
+
+have a dictionary
+ -> class values
+    -> each attribute
+        -> 0 - 4 (for each bucket of the discretized attribute)
+            :number of each observation in that bucket divided by number of attributes with that class label
+
+
+setosa: {
+    0: {
+        0: 12/50,
+        1: 12/50,
+        2: 12/50,
+        3: 14/50
+    },
+    1: {
+
+    }, 
+    2: {
+
+    },
+    3: {
+
+    }
+}
+
+loop through every class value
+    loop through each header
+        loop through each instance
+            Z
