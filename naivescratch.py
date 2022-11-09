@@ -32,7 +32,7 @@ probabilities = dict()
 
 
 print("Training...")
-
+print("Calculating all probabilities to use during testing...")
 
 for num in tqdm(set(y)): # num = equal a class value 
     probabilities[num] = dict() # establishes a dictionary for each class value 
@@ -52,7 +52,7 @@ for num in tqdm(set(y)): # num = equal a class value
 
 
 print(f"\n# of test observations: {len(Xd_test)}")
-print("Testing...")
+print("Testing...\n")
 
 correct = 0
 total = 0
@@ -71,6 +71,7 @@ for i in range(len(Xd_test)):
         correct += 1
     total += 1
     confusion_matrix[prediction, y_test[i]] = confusion_matrix[prediction, y_test[i]] + 1
+    print("Prediction: ", prediction, "Actual: ", y_test[i], "Correct: ", prediction == y_test[i])
 
 print("\nTesting accuracy", correct/total * 100, "%")
 print("Confusion matrix: ")
